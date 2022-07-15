@@ -1,6 +1,6 @@
 # My Learnings
 
-Notes of various tools, libraries and languages I use.
+Notes of various tools, libraries and languages I use. This is available as GitHub Pages site [here](https://ravigit.github.io/learnings/)
 
 ## Clojure
 
