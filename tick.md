@@ -15,7 +15,7 @@ OffsetDateTime and ZonedDateTime bring LocalDateTime to reality ie, they can be 
 
 ### Tick
 
-```
+```clojure
   (require ['tick.alpha.api :as t])
 
   (t/now) ;; This is Java API Instant *now*

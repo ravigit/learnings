@@ -23,7 +23,7 @@
 
 #### Example
 
-```
+```clojure
 (def ch (ca/chan))
 (def ch2 (ca/chan))
 (def ch3 (ca/chan))
