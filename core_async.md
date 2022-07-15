@@ -19,6 +19,7 @@
 - alts! takes a vector of channels and returns a pair, of which the first is the value on the channel and the second the channel itself.
 - alts!! is same as above but works outside go-block
 - alt! form is same as cond in that it takes clauses, each of which can be a channel, a vector of channels or a vector of vector containing a channel and a value. The last form is to put (not take) that value into the given channel. This makes sense in case of unbuffered channels with no listener, in which case the form can timeout or do something else.
+- alt!! is same as above but works outside go-block
 
 #### Example
 
