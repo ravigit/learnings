@@ -18,7 +18,8 @@ clj-new  com.github.seancorfield/clj-new  :git  v1.2.399
 new      io.github.seancorfield/deps-new  :git  v0.4.12
 tools    io.github.clojure/tools.tools    :git  v0.2.5
 ```
-The argument *tools* is an alias for tools.tools tool.
+The argument *tools* is an alias for tools.tools tool
+
 
 - <ins>deps-new</ins> is a library written by Sean Corfield, that can be used to create empty projects based on templates. It also provides a template to create new templates. However, the templates *cannot* be packaged into a jar as of git tag "v0.8.2". One has to refer the template by git url or local folder. Here's an example of how to create a project from a deps-new template 
 
@@ -26,4 +27,8 @@ The argument *tools* is an alias for tools.tools tool.
 clj -Sdeps '{:deps {net.clojars.ravi/mytemplate {:local/root "mytemplate"}}}' -Tnew create :template ravi/mytemplate :name ravi/new-app
 ```
 
-This creates a new project called new-app.
+This creates a new project called new-app, from *mytemplate* template project. To create a new template, create a template project and modify it
+
+```
+clojure -Tnew template :name ravi/mytemplate
+```
