@@ -9,7 +9,7 @@ deps.edn can be specified on the command line with clj, or specified as file `de
 ```bash
 > clj -Tbuild build-jar
 ```
-where build-jar is a function defined in `build.clj` file. The argument to option "-T",*build*, is an alias for tools.build tool. To see all the installed tools locally, one can
+where build-jar is a function defined in `build.clj` file. The argument to option "-T",*build*, is an alias for tools.build tool. To see all the installed tools locally, one can do
 ```bash
 > clj -Ttools list
 TOOL     LIB                              TYPE  VERSION
@@ -20,4 +20,10 @@ tools    io.github.clojure/tools.tools    :git  v0.2.5
 ```
 The argument *tools* is an alias for tools.tools tool.
 
-- <ins>deps-new</ins> is a library written by Sean Corfield, that can be used to create empty projects based on templates. It also provides a template to create new templates
+- <ins>deps-new</ins> is a library written by Sean Corfield, that can be used to create empty projects based on templates. It also provides a template to create new templates. However, the templates *cannot* be packaged into a jar as of git tag "v0.8.2". One has to refer the template by git url or local folder. Here's an example of how to create a project from a deps-new template 
+
+``` bash
+clj -Sdeps '{:deps {net.clojars.ravi/mytemplate {:local/root "mytemplate"}}}' -Tnew create :template ravi/mytemplate :name ravi/new-app
+```
+
+This creates a new project called new-app.
