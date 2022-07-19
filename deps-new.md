@@ -12,6 +12,11 @@ deps.edn can be specified on the command line with clj, or specified as file `de
 where build-jar is a function defined in `build.clj` file. The argument to option "-T",*build*, is an alias for tools.build tool. To see all the installed tools locally, one can
 ```bash
 > clj -Ttools list
+TOOL     LIB                              TYPE  VERSION
+build    io.github.clojure/tools.build    :git  v0.8.3
+clj-new  com.github.seancorfield/clj-new  :git  v1.2.399
+new      io.github.seancorfield/deps-new  :git  v0.4.12
+tools    io.github.clojure/tools.tools    :git  v0.2.5
 ```
 The argument *tools* is an alias for tools.tools tool.
 
