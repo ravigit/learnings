@@ -4,3 +4,4 @@ Notes of various tools, libraries and languages I use. This is available as GitH
 
 - Understanding [core async](core_async)
 - Juxt's [tick](tick) library
+- [Deps.edn](deps-new)
