@@ -29,6 +29,6 @@ clj -Sdeps '{:deps {net.clojars.ravi/mytemplate {:local/root "mytemplate"}}}' -T
 
 This creates a new project called new-app, from *mytemplate* template project. To create a new template, create a template project and modify it
 
-```
-clojure -Tnew template :name ravi/mytemplate
+```bash
+clj -Tnew template :name ravi/mytemplate
 ```
