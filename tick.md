@@ -100,6 +100,11 @@ OffsetDateTime and ZonedDateTime bring LocalDateTime to reality ie, they can be 
   (t/>> (t/offset-date-time "2022-03-07T13:05:32.994493-08:00")
         (t/new-period 1 :months))
   ;; => #time/offset-date-time "2022-04-07T13:05:32.994493-08:00"
+  
+  ;; Convert millis into local date time
+  (t/in (t/instant 1665092442171) (t/zone))
+  ;; => #time/zoned-date-time "2022-10-06T14:40:42.171-07:00[America/Los_Angeles]"
+  
 
 
 ```
